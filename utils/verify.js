@@ -5,7 +5,7 @@ async function verify(contarctAddress, args) {
   try {
     await run("verify:verify", {
       address: contarctAddress,
-      constructorArguments: [args],
+      constructorArguments: args,
     });
   } catch (e) {
     if (e.message.toLowerCase().includes("already verified")) {

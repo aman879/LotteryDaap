@@ -30,7 +30,7 @@ describe("Lottery", function () {
           console.log("winnerPicked Event fired!");
           resolve();
           try {
-            const recentWinner = await lottery.getLotteryWinner();
+            const recentWinner = await lottery.getRecentWinner();
             const lotteryState = await lottery.getLotteryState();
             const winnerEndingBalance = await accounts[0].getBalance();
             const endingTimeStamp = await lottery.getLastTimeStamp();
